@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.zoom = "110%";
+});
+
 // sidebar.js
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.dashboard ul li a');
