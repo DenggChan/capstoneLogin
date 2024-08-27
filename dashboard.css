@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+/* Root Variables */
+:root {
+    --main-color: #066767;
+    --text-color: #fff;
+    --other-color: #F5D000;
+    --second-color: #5CD6C0;
+    --third-color: #C65B7C;
+    --fourth-color: #FBBFCA;
+    --fifth-color: #F46680;
+    --dark-color: #32292F;
+
+    --bg-color: linear-gradient(90deg, #E4F3E3, #62c2eb);
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+}
+
+/* General Layout */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFCEB; /* Page-specific background color */
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Dashboard Styling */
+.dashboard {
+    width: 300px; /* Adjust width as needed */
+    background: linear-gradient(to bottom, #E4F3E3, #62c2eb); /* Vertical gradient */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Logo inside Dashboard */
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 24px; /* Adjusted size */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo-img {
+    width: 28px; /* Adjusted size */
+    height: 25px; /* Adjusted size */
+    margin-right: 10px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.marychild {
+    color: #F5D000;
+    margin-right: 5px;
+}
+
+.academy {
+    color: #85CAFF;
+}
+
+/* Dashboard Menu */
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Make menu grow to fill available space */
+}
+
+.dashboard ul li {
+    margin-bottom: 20px;
+}
+
+.dashboard ul li a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard ul li a.active,
+.dashboard ul li a:hover {
+    background-color: var(--second-color);
+    color: var(--text-color); /* Change text color on hover */
+}
+
+/* Logout Button Styling */
+.logout {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+    transition: background-position 0.5s, color 0.5s;
+    text-decoration: none; /* Remove underline */
+}
+
+.logout:hover {
+    background-position: right;
+    color: #fff; /* Maintain text color on hover */
+}
+
+/* Content Styling */
+.content {
+    flex: 1; /* Takes remaining space between dashboard and sidebar */
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Modules Display */
+.modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between modules */
+}
+
+.module {
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
+    color: var(--dark-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33% - 20px); /* Adjust width as needed */
+    box-sizing: border-box; /* Include border and padding in width calculation */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 350px; /* Adjust width as needed */
+    background: var(--text-color); /* Define color for sidebar background */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Calendar and To Do List */
+.calendar, .todo {
+    margin-bottom: 20px;
+}
+
+.todo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo li {
+    margin-bottom: 10px;
+}
+
+/* Calendar Styling */
+.calendar {
+    background: var(--text-color);
+    color: var(--dark-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.calendar-header button:hover {
+    background-color: var(--second-color);
+}
+
+.calendar-header .month-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-color);
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-header-item {
+    text-align: center;
+    background-color: var(--third-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.calendar-day {
+    background-color: var(--text-color);
+    color: var(--dark-color);
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.calendar-day.today {
+    background-color: var(--highlight-color);
+    color: var(--second-color);
+    font-weight: bold;
+}
