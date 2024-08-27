@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.zoom = "110%";
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     // Menu Toggle Functionality
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.navlist');
